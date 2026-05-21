@@ -1,0 +1,88 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.5 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.5">
+  <diagram name="Page-1" id="446glr5ZFlLkLnnVaXkz">
+    <mxGraphModel dx="1801" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p6UTuyCseA-quNythQTS-27" value="Iiems" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-20" y="820" width="330" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="cFonhUEIRqfquOaEyEV4-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="p6UTuyCseA-quNythQTS-1" target="p6UTuyCseA-quNythQTS-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-1" value="Gear Menu" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-10" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-2" value="Inventario" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="330" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="p6UTuyCseA-quNythQTS-3" target="p6UTuyCseA-quNythQTS-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="p6UTuyCseA-quNythQTS-3" target="p6UTuyCseA-quNythQTS-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-3" value="Combate" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="190" width="290" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-4" value="Armas/Equipo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="175" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="p6UTuyCseA-quNythQTS-6" target="p6UTuyCseA-quNythQTS-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-6" value="Personaje" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-90" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-7" value="Enemigo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="510" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-8" value="Nivel" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="290" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-9" value="Turnos" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-13" value="Cambio de Fases" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-21" value="Loot" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="790" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.667;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="p6UTuyCseA-quNythQTS-7" target="p6UTuyCseA-quNythQTS-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-28" value="Skills" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry y="930" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cFonhUEIRqfquOaEyEV4-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="p6UTuyCseA-quNythQTS-2" target="p6UTuyCseA-quNythQTS-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="510" as="sourcePoint" />
+            <mxPoint x="220" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p6UTuyCseA-quNythQTS-5" value="Tienda" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cFonhUEIRqfquOaEyEV4-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.596;entryY=-0.016;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="p6UTuyCseA-quNythQTS-5" target="p6UTuyCseA-quNythQTS-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cFonhUEIRqfquOaEyEV4-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.003;entryY=0.552;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="p6UTuyCseA-quNythQTS-21" target="p6UTuyCseA-quNythQTS-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cFonhUEIRqfquOaEyEV4-9" value="Consumible" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cFonhUEIRqfquOaEyEV4-10" value="Key Object" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="175" y="930" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cFonhUEIRqfquOaEyEV4-11" value="Misiones" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="320" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cFonhUEIRqfquOaEyEV4-12" value="Eventos" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="190" width="200" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

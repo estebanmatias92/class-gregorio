@@ -1,0 +1,90 @@
+Juego de brujas
+
+Tipo de juego: Bossrush, juego de cartas, por turnos
+
+Objetivo: El jugador se tendra que enfrentar a 8 enemigos para ganar (Estos enemigos seran igual de fuertes que el jugador, pero contaran
+con una inteligencia artificial dificil)
+
+Como jugar basico: Tanto el enemigo como el jugador siguen las mismas reglas. 
+1- Cada jugador TIENE un mazo de 12 cartas (Una de estas cartas es unica de cada personaje), y aunque se pueden cambiar las cartas, 
+el numero de cartas siempre debe ser 12. 
+2- Cada jugador PUEDE revisar que cartas tiene en el mazo y en el cementerio, pero lo que su rival tiene en la mano especificamente.
+3- Cada jugador DEBE descartas toda su mano y robar 3 cartas al principio del turno, y si no hay cartas para robar se baraja las cartas 
+descartadas.
+4- Cada jugador DEBE elegir una carta, sin saber la carta del oponente, y se activaran las dos al mismo tiempo.
+5- Se comparan las cartas y se activan los efectos debidos.
+6- Cuando un jugador llegua a 0 de vida, este pierde el combate.
+
+Gameplay loop: 
+1- Al jugador se le presenta la opcion de enfrentarse entre 2 enemigos (2 de los 8), y este DEBE elegir uno para de pelear (El enemigo no 
+elegido aparecera luego para ser derrotado otra ves, pero mas fuerte)
+2- El jugador se enfrentara al enemigo, y, al derrotarlo, ganara una recompensa, al perder la batalla perdera la run.
+3- La recompensa es poder cambiar hasta 2 cartas de tu mazo con el del enemigo. Las cartas cambiadas se quedaran guardadas para ser cambiadas
+en cualquier momento.
+4- Los mazos de los enemigos tambien se volveran mas fuertes conforme se avanza la partida, por lo que el jugador debera cambiar sus cartas
+mas debiles.
+
+Cartas y mecanicas relacionadas:
+Los ataques y defensas tienen un numero que indican su poder, ademas de efectos adicionales.
+Ventaja: El jugador que le inflija daño al otro tendra la Ventaja de su lado. El jugador que tiene la Ventaja es el primero en activar
+los efectos de sus cartas en caso de que estas tengan la misma velocidad. La ventaja cambia al principio del turno al primer jugador que hizo
+daño el turno anterior.
+Las cartas no tienen coste alguno (A menos que la carta lo especifique). 
+Hay 4 tipos de cartas:
+Ataques cuerpo a cuerpo, velocidad = 1
+Ataques a distancia, velocidad = 2
+Defensa, velocidad = 3
+Magia, velocidad = 3
+La velocidad en las cartas afecta la manera en la que se juegan, por ejemplo: Una magia siempre ira primero que un ataque, porque esta cuenta
+con mas velocidad, sin embargo, si un jugador juega una magia y el otro una defensa, el que tenga la Ventaja activara su carta primero.
+
+Interacciones entre cartas: 
+Cuando dos ataques cuerpo a cuerpo se activan al mismo tiempo, ambos activan cualquier efecto que tengan, luego se compara cual tiene el poder
+mas grande y solo esa inflijira el daño completo a su adversario. Ademas, al hacer daño, pueden activar sus efectos de hacer daño, por ejemplo.
+
+CartaPrueba1= 3 de poder, si tu rival tiene mas vida gana +5 de poder.
+CartaPrueba2= 4 de poder, al inflijir daño haz 3 de daño mas.
+
+En este caso, si ambos jugadores tendrian igual vida, CartaPrueba2 ganaria por tener mas poder, y le inflijiria 4 de daño al adversario, luego,
+activaria su efecto para inflijir 3 de daño mas. Por el otro lado, si el jugador de CartaPrueba1 tiene menos vida, este activaria su efecto y 
+ganaria por tener mas poder, e inflijiria 8 de daño.
+
+Las cartas a distancia no se bloquean entre si, sino que primero activan su efecto, luego se hacen daño entre si y luego activan sus efectos 
+al golpear. Esto por orden de prioridad, ejemplo:
+
+CartaPrueba3= 5 de poder, gana 2 de vida, al inflijir daño inflije el daño del poder de esta carta.
+CartaPrueba4= 1 de poder, el jugador enemigo no se puede curar este turno, al inflijir daño reduce en 3 el poder de la carta rival.
+
+En este caso, si el jugador que usa CartaPrueba3 tiene ventaja, la situacion seria: CartaPrueba3 cura 2 de vida, luego cartaPrueba4 intenta
+negar la curacion pero es muy tarde. CartaPrueba3 inflije 5 de daño y otros 5 por su efecto, y solo luego CartaPrueba4 inflije 1 de daño y
+reduce el poder de la otra carta.
+Si fuera el caso contrario, CartaPrueba4 negaria las curaciones, luego el efecto de curacion de CartaPrueba3 seria negado. Luego, CartaPrueba4
+inflinjiria 1 de daño y reduciria el poder de la otra carta en 3, y solo luego CartaPrueba3 inflinjiria 2 de daño (Por la reduccion) y activaria
+su efecto por otros 2 de daño
+
+Si un jugador activa una carta de ataque a distancia, y el otro jugador una de ataque cuerpo a cuerpo, primero se activa el efecto del ataque 
+a distancia, luego inflije el daño y activa su efecto de golpear, y solo despues el jugador con el ataque cuerpo a cuerpo hace lo mismo, sin
+importar la ventaja. 
+
+Las defensas funcionan de la siguente manera: Al activar la defensa, esta tiene un numero de poder como los ataques, y activaran su efecto.
+La defensa no inflije daño, sino que reduce el de las cartas de ataque, por ejemplo: 
+
+CartaPrueba5= 4 de poder, al inflijir daño inflije el daño del poder de esta carta.
+CartaPrueba6 = 3 de poder, si la carta enemiga es un ataque cuerpo a cuerpo, gana 3 de poder mas, al bloquear un ataque inflije 3 de daño.
+
+En este caso CartaPrueba6 SIEMPRE va primero, por ser una defensa, y, si CartaPrueba5 fuera un ataque a distancia, este inflingiria 1 de daño
++ 1 de daño por su efecto. Si CartaPrueba5 fuera un ataque cuerpo a cuerpo, CartaPrueba6 ganaria mas defensa, por lo que el ataque de 
+CartaPrueba5 no conectaria ni se activaria su efecto, pero si el de CartaPrueba6
+Hay que tener en cuenta que los efectos de "al bloquear" solo se activan si se bloqueo todo el daño.
+
+Las cartas magicas tienen efectos aparte y no interactuan con ninguna otra carta de manera que no indique el efecto. Estas van primero que los
+ataques y dependen de la ventaja contra las defensas.
+Los efectos pueden ser:
+CartaPrueba7= Inflije 5 de daño.
+Si jugamos esta carta, el jugador siempre va a recivir 5 de daño, no importa la defensa (ya que no es un ataque), pero esto no impedira que el
+rival active sus ataques. 
+CartaPrueba8= Si la carta de tu adversario es un ataque, niegala e inflije 3 de daño.
+Esta carta solo se activara si la carta de tu adversario es un ataque. Negar una carta implica que esta ya no tendra ningun efecto ni hara daño.
+Otras cartas podran solo negar efectos o solo el daño.
+
+
