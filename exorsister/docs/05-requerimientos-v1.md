@@ -9,6 +9,14 @@
 
 ## 1. Requerimientos Funcionales (RF)
 
+### 1.0 Módulo: Servicio de Semilla (SeedService)
+
+| ID | Requerimiento | Prioridad | CU origen |
+|:--:|---------------|:---------:|:---------:|
+| RF-66 | El sistema debe exponer un servicio central que, dada una semilla, responda consultas deterministas para cada módulo: ubicación de eventos, estadísticas de objetos, datos de enemigos, misiones diarias, recompensas, tipo de Mal del Mundo y páginas de ritual. | Alta | CU-01 |
+| RF-67 | El sistema debe garantizar que, para una misma semilla y los mismos parámetros de consulta (ej. día, ubicación), la respuesta sea siempre idéntica en todas las iteraciones de la partida. | Alta | CU-01 |
+| RF-68 | El sistema debe permitir que cada módulo (Inventario, Combate, Exploración, Misiones, Jefe Final) consuma datos de la semilla sin conocer el algoritmo de generación interno. | Media | CU-01 |
+
 ### 1.1 Módulo: Gestión de Partida
 
 |  ID   | Requerimiento                                                                                                                                                                                                              | Prioridad | CU origen |
@@ -172,6 +180,7 @@
 | RF | CU origen |
 |:--:|:---------:|
 | RF-01 al RF-06 | CU-01 |
+| RF-66 al RF-68 | CU-01 |
 | RF-07 al RF-10 | CU-15 |
 | RF-11, RF-12 | CU-16 |
 | RF-13 al RF-15 | CU-02 |
@@ -200,7 +209,7 @@
 
 | CU | RFs |
 |:--:|:----|
-| CU-01 | RF-01 al RF-06 |
+| CU-01 | RF-01 al RF-06, RF-66 al RF-68 |
 | CU-02 | RF-13 al RF-16, RF-20 |
 | CU-03 | RF-16, RF-21 al RF-27 |
 | CU-04 | RF-28 al RF-30 |
