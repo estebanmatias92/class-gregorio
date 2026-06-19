@@ -195,12 +195,12 @@ Ejemplo conceptual:
 
 Jugador    CombatScene    Enemy
    │            │          │
-   │── atacar →│          │
-   │           │── dañar →│
-   │           │          │── verificar_vida()
-   │           │          │── return (vivo/muerto)
-   │           │←─ resul--│
-   │←─ feedback│          │
+   │── atacar ─→│          │
+   │            │── dañar →│
+   │            │          │── verificar_vida()
+   │            │          │── return (vivo/muerto)
+   │            │←─ resul--│
+   │←─ feedback │          │
 ```
 
 ### Output de Diseño

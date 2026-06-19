@@ -1,6 +1,6 @@
 # Exorsister — AGENTS.md
 
-RPG táctico Godot 4.x (GDScript). SDLC: Análisis completo, Diseño en curso.
+RPG táctico Godot 4.x (GDScript). SDLC: RE en curso (completar fichas), Análisis no iniciado, Diseño en borrador.
 **NO implementar código ni crear project.godot** — el proyecto no está en fase de implementación aún.
 
 ## Documentación (docs/)
@@ -22,3 +22,24 @@ Ubicación: `.opencode/skills/especificar-ficha/SKILL.md`
 
 Definido en `03-design/06-disenio-tecnico.md` §7.
 SeedService → Inventario → Partida → Conocimiento → Exploración → Combate → Economía → Misiones → Jefe Final → Maldiciones
+
+## Progreso actual (última actualización: 2026-06-19)
+
+| Módulo | RFs | Fichas | Contrato | Prioridad sig. |
+|--------|-----|--------|----------|:--------------:|
+| SeedService | 66-68 | ✅ 3/3 | ✅ | — |
+| Gestión de Partida | 01-12 | ⬜ 0/12 | ⬜ | 2 |
+| Exploración y Tiempo | 13-20 | ⬜ 0/8 | ⬜ | 4 |
+| Combate | 21-31 | ⬜ 0/11 | ⬜ | 5 |
+| **→ Inventario y Equipamiento** | **32-39** | **⬜ 0/8** | **⬜** | **1 ← SIGUIENTE** |
+| Conocimiento | 40-45 | ⬜ 0/6 | ⬜ | 3 |
+| Economía y Servicios | 46-50 | ⬜ 0/5 | ⬜ | 6 |
+| Misiones | 51-55 | ⬜ 0/5 | ⬜ | 7 |
+| Jefe Final | 56-62 | ⬜ 0/7 | ⬜ | 8 |
+| Maldiciones | 63-65 | ⬜ 0/3 | ⬜ | 9 |
+| No Funcionales | RNF 01-15 | ⬜ 0/15 | ⬜ | 10 |
+
+**Próximo paso:**
+`skill("especificar-ficha")` y procesar **Inventario y Equipamiento (RF-32 a RF-39)**.
+
+Leyenda: ✅ completo — ⬜ pendiente — ⏳ en progreso
