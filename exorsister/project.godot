@@ -1,0 +1,16 @@
+; Engine configuration
+config_version=5
+
+[application]
+config/name="Exorsister"
+config/description="RPG táctico por turnos con bucle temporal determinista"
+run/main_scene="res://scenes/main/MainMenu.tscn"
+config/features=PackedStringArray("4.0")
+
+[autoload]
+SignalBus="*res://scripts/core/signal_bus.gd"
+RunState="*res://scripts/core/run_state.gd"
+GameState="*res://scripts/core/game_state.gd"
+
+[rendering]
+renderer/rendering_method="mobile"
