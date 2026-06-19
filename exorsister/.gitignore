@@ -1,0 +1,20 @@
+# Godot
+.godot/
+*.import
+*.translation
+export/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Build
+bin/
+build/
